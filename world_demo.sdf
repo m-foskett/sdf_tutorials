@@ -21,7 +21,7 @@
       filename="gz-sim-scene-broadcaster-system"
       name="gz::sim::systems::SceneBroadcaster">
     </plugin>
-    <!-- 3D scene -->
+    <!-- 3D scene - plugin to visualize the 3D scene -->
     <plugin filename="MinimalScene" name="3D View">
     <gz-gui>
         <title>3D View</title>
@@ -48,7 +48,7 @@
         <property key="showTitleBar" type="bool">false</property>
     </gz-gui>
     </plugin>
-    <!-- World control -->
+    <!-- World control - plugin to control the world, play, pause, step, etc. -->
     <plugin filename="WorldControl" name="World control">
         <gz-gui>
             <title>World control</title>
@@ -71,7 +71,7 @@
         <service>/world/world_demo/control</service>
         <stats_topic>/world/world_demo/stats</stats_topic>
     </plugin>
-    <!-- World statistics -->
+    <!-- World statistics - plugin to show the statistics of the world -->
     <plugin filename="WorldStats" name="World stats">
         <gz-gui>
             <title>World stats</title>
@@ -95,7 +95,7 @@
         <topic>/world/world_demo/stats</topic>
 
     </plugin>
-    <!--light-->
+    <!-- Light entity -->
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
@@ -109,6 +109,7 @@
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
+    <!-- Models -->
     <include>
         <name>Coke0</name>
         <pose>0 0 0 0 0 0</pose>
